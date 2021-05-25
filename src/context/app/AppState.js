@@ -46,6 +46,12 @@ export const AppState = ({children}) => {
       };
     });
   };
+  const deleteImage = (index) => {
+    dispatch({
+      type: SET_IMAGES,
+      images: state.images.filter((_, i) => i !== index),
+    });
+  };
 
   return (
       <AppContext.Provider
@@ -53,6 +59,7 @@ export const AppState = ({children}) => {
             images: state.images,
             dragUploadImage,
             uploadImages,
+            deleteImage,
           }}
       >
         {children}

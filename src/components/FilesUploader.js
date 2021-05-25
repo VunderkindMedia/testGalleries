@@ -8,12 +8,10 @@ export const FilesUploader = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
   const {uploadImages} = useContext(AppContext);
-
   const uploadInput = useRef(null);
 
   const onFileChange = (event) => {
     setError(null);
-    console.log(event.target.files[0]);
     if (event.target.files?.[0] && event.target.files[0].type ===
         'application/json') {
       setFile(event.target.files[0]);
@@ -44,12 +42,14 @@ export const FilesUploader = () => {
             <input
                 ref={uploadInput}
                 className={'files_upload_provider__click_input'}
-                type="file" onChange={onFileChange}/>
+                type="file" onChange={onFileChange}
+            />
           </div>
           <Button disabled={!file}
                   moreClassName={'files_upload_provider__upload_button'}
                   title={'Загрузить изображения в галлерею'}
-                  onClick={() => onFileUpload(file)}/>
+                  onClick={() => onFileUpload(file)}
+          />
         </div>
       </div>
   );

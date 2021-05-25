@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useRef, useEffect, useState, useContext} from 'react';
 import {AppContext} from '../context/app/AppContext';
 
@@ -8,7 +9,6 @@ export const DDUploadProvider = ({children}) => {
   const {dragUploadImage} = useContext(AppContext);
 
   useEffect(() => {
-    console.log(dragCounter);
     if (dragCounter === 0) {
       setDraggable(false);
     }
@@ -53,7 +53,7 @@ export const DDUploadProvider = ({children}) => {
 
   return (
       <div className={'dd_upload_provider '} ref={dropRef}>
-        {draggable && <div className={'dd_upload_provider__modal'}></div>}
+        {draggable && <div className={'dd_upload_provider__modal'}/>}
         {children}
       </div>
   );

@@ -5,13 +5,16 @@ const Button = ({
                   color = '#16a085',
                   moreClassName,
                   title = 'Button',
-                  onClick,
+                  onClick = () => {
+                  },
                   disabled = false,
                 }) => {
   return (
       <div style={{backgroundColor: disabled ? '#6c6c6c' : color}}
            className={moreClassName ? `button ${moreClassName}` : 'button'}
-           onClick={!disabled && onClick}>{title}</div>
+           onClick={() => {
+             !disabled && onClick();
+           }}>{title}</div>
   );
 };
 
