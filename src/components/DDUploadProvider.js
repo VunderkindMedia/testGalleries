@@ -1,12 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useRef, useEffect, useState, useContext} from 'react';
-import {AppContext} from '../context/app/AppContext';
+import React, {useRef, useEffect, useState} from 'react';
 
-export const DDUploadProvider = ({children}) => {
+export const DDUploadProvider = ({children, onChange}) => {
   const dropRef = useRef(null);
   const [draggable, setDraggable] = useState(false);
   const [dragCounter, setDragCounter] = useState(0);
-  const {dragUploadImage} = useContext(AppContext);
 
   useEffect(() => {
     if (dragCounter === 0) {
@@ -34,7 +32,7 @@ export const DDUploadProvider = ({children}) => {
     e.stopPropagation();
     setDraggable(false);
     setDragCounter(0);
-    dragUploadImage(e.dataTransfer.files[0]);
+    onChange(e.dataTransfer.files);
   };
 
   useEffect(() => {
@@ -52,7 +50,7 @@ export const DDUploadProvider = ({children}) => {
   }, []);
 
   return (
-      <div className={'dd_upload_provider '} ref={dropRef}>
+      <div className={'dd_upload_provider'} ref={dropRef}>
         {draggable && <div className={'dd_upload_provider__modal'}/>}
         {children}
       </div>

@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from 'react';
 import {AppContext} from '../context/app/AppContext';
 import {ActivityIndicator} from './ActivityIndicator';
 import {Button} from './Button';
-import {DDUploadProvider} from './DDUploadProvider';
 import {useHistory} from 'react-router-dom';
 import {DeleteButton} from './DeleteButton';
 
@@ -25,7 +24,7 @@ export const Gallery = () => {
     deleteImage(index);
   };
   return (
-      <DDUploadProvider>
+      <div className={'wrapper'}>
         {loading ? <ActivityIndicator/> :
             <div className={'gallery'}>
               {
@@ -56,6 +55,6 @@ export const Gallery = () => {
                 }
               </div>
             </div>}
-      </DDUploadProvider>
+      </div>
   );
 };
