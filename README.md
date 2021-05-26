@@ -4,7 +4,7 @@
 
 ## LIVE DEMO
 
-<img src="https://vunderkindmedia.github.io/testGalleries/static/demonstration.gif?raw=true">
+![demonstration](https://i.yapx.ru/MY8S9.gif)
 
 [Демонстрационная версия](https://vunderkindmedia.github.io/testGalleries/)
 
