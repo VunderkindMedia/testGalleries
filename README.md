@@ -4,7 +4,7 @@
 
 ## LIVE DEMO
 
-![til](https://vunderkindmedia.github.io/testGalleries/static/demonstration.gif)
+![hippo](https://vunderkindmedia.github.io/testGalleries/static/demonstration.gif)
 
 [Демонстрационная версия](https://vunderkindmedia.github.io/testGalleries/)
 
