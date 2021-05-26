@@ -4,7 +4,7 @@
 
 ## LIVE DEMO
 
-![demonstration](https://vunderkindmedia.github.io/testGalleries/static/demonstration.gif)
+<img src="https://vunderkindmedia.github.io/testGalleries/static/demonstration.gif?raw=true">
 
 [Демонстрационная версия](https://vunderkindmedia.github.io/testGalleries/)
 
