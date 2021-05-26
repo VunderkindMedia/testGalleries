@@ -10,7 +10,7 @@ import {Gallery} from './components/Gallery';
 
 function App() {
   return (
-      <Router>
+      <Router basename={'/testGalleries'}>
         <Switch>
           <Route exact path="/">
             <FilesUploader/>
